@@ -1,0 +1,196 @@
+<!DOCTYPE html> 
+
+<html lang="en"> 
+
+<head> 
+
+    <meta charset="UTF-8"> 
+
+    <title>jQuery Visibility [&] Fade Effects Demo</title> 
+
+  
+
+    <!-- jQuery CDN --> 
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> 
+
+  
+
+    <style> 
+
+        body { 
+
+            font-family: Arial, sans-serif; 
+
+            padding: 20px; 
+
+        } 
+        
+      h2 {
+          text-align: center;
+      }
+        section {
+            display: flex; 
+            flex-direction: column;
+
+
+        }
+      
+        div {
+            justify-content: center;
+            align-self: center
+          
+        }
+
+        button { 
+
+            margin: 4px; 
+
+            padding: 8px 12px; 
+
+            cursor: pointer; 
+          
+        } 
+
+  
+
+        #box { 
+
+            width: 200px; 
+
+            height: 120px; 
+
+            background-color: steelblue; 
+
+            color: white; 
+
+            margin-top: 20px; 
+
+            border-radius: 6px; 
+            
+            text-align: center;
+        } 
+
+    </style> 
+
+</head> 
+
+<body> 
+
+  
+
+    <h2>jQuery Hide / Show / Toggle [&] Fade Effects</h2> 
+
+  
+<section>
+    <div> 
+
+        <button id="hideBtn">hide()</button>     
+
+        <button id="showBtn">show()</button> 
+
+        <button id="toggleBtn">toggle()</button> 
+
+    </div> 
+
+  
+
+    <div> 
+
+        <button id="fadeInBtn">fadeIn()</button> 
+
+        <button id="fadeOutBtn">fadeOut()</button> 
+
+        <button id="fadeToggleBtn">fadeToggle()</button> 
+
+        <button id="fadeToBtn">fadeTo(0.3)</button> 
+        
+        <button id="fadeToBtn2">fadeTo(1)</button>
+
+    </div> 
+
+  
+
+    <div id="box"> 
+
+        Effect Box 
+
+    </div> 
+  </section>
+  
+
+    <script> 
+
+        $(document).ready(function () { 
+
+
+
+            $("#hideBtn").click(function () { 
+
+                $("#box").hide(); 
+
+            }); 
+
+  
+
+            $("#showBtn").click(function () { 
+
+                $("#box").show(); 
+
+            }); 
+
+  
+
+            $("#toggleBtn").click(function () { 
+
+                $("#box").toggle(); 
+
+            }); 
+
+  
+
+            $("#fadeInBtn").click(function () { 
+
+                $("#box").fadeIn(); 
+
+            }); 
+
+  
+
+            $("#fadeOutBtn").click(function () { 
+
+                $("#box").fadeOut(); 
+
+            }); 
+
+  
+
+            $("#fadeToggleBtn").click(function () { 
+
+                $("#box").fadeToggle(); 
+
+            }); 
+
+  
+
+            $("#fadeToBtn").click(function () {
+            $("#box").fadeTo(500, 0.3);
+            });
+
+            $("#fadeToBtn2").click(function () {
+            $("#box").css("opacity", 1);            
+            });
+          
+          
+          
+        }); 
+
+    </script> 
+
+  
+
+</body> 
+
+</html> 
+
+ 
