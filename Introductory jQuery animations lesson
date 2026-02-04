@@ -1,0 +1,129 @@
+<!DOCTYPE html> 
+
+<html lang="en"> 
+
+<head> 
+
+    <meta charset="UTF-8"> 
+
+    <title>jQuery Animations Demo</title> 
+ 
+<!-- Load jQuery library from CDN --> 
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> 
+ 
+<style> 
+    /* Basic page styling */ 
+    body { 
+        font-family: Arial, sans-serif; 
+        padding: 20px; 
+    } 
+ 
+    /* Button styling */ 
+    button { 
+        margin: 4px; 
+        padding: 8px 12px; 
+        cursor: pointer; 
+    } 
+ 
+    /* Panel used for slide animations */ 
+    #panel { 
+        width: 300px; 
+        height: 120px; 
+        background-color: #4CAF50; 
+        color: white; 
+        display: none; /* Hidden at start for slideDown() */ 
+        align-items: center; 
+        justify-content: center; 
+        margin-top: 15px; 
+        border-radius: 6px; 
+    } 
+ 
+    /* Box used for custom animate() */ 
+    #box { 
+        width: 100px; 
+        height: 100px; 
+        background-color: steelblue; 
+        margin-top: 25px; 
+        border-radius: 6px; 
+        position: relative; /* Required for left movement */ 
+    } 
+</style> 
+<h2>jQuery Animations: Slide &amp Animate</h2> 
+ 
+<!-- SLIDE EFFECTS SECTION --> 
+<h3>Slide Effects</h3> 
+ 
+<!-- Buttons trigger slide animations --> 
+<button id="slideDownBtn">slideDown()</button> 
+<button id="slideUpBtn">slideUp()</button> 
+<button id="slideToggleBtn">slideToggle()</button> 
+ 
+<!-- Element affected by slide animations --> 
+<div id="panel"> 
+    Sliding Panel 
+</div> 
+ 
+<!-- ANIMATE SECTION --> 
+<h3>Custom Animation</h3> 
+ 
+<!-- Buttons trigger animate() and reset --> 
+<button id="animateBtn">animate()</button> 
+<button id="resetBtn">reset</button> 
+ 
+<!-- Element affected by animate() --> 
+<div id="box"></div> 
+ 
+<script> 
+    // Make sure the page is fully loaded before running jQuery 
+    $(document).ready(function () { 
+ 
+        /* ========================= 
+           SLIDE ANIMATION METHODS 
+           ========================= */ 
+ 
+        // Reveals the panel by sliding it down 
+        $("#slideDownBtn").click(function () { 
+            $("#panel").slideDown(); 
+        }); 
+ 
+        // Hides the panel by sliding it up 
+        $("#slideUpBtn").click(function () { 
+            $("#panel").slideUp(); 
+        }); 
+ 
+        // Toggles between slideUp() and slideDown() 
+        $("#slideToggleBtn").click(function () { 
+            $("#panel").slideToggle(); 
+        }); 
+ 
+        /* ========================= 
+           CUSTOM ANIMATE METHOD 
+           ========================= */ 
+ 
+        // Animates multiple CSS properties at once 
+        $("#animateBtn").click(function () { 
+            $("#box").animate({ 
+                left: "200px",   // Move right 
+                opacity: 0.5,    // Make transparent 
+                width: "150px",  // Increase width 
+                height: "150px"  // Increase height 
+            }, 800); // Duration in milliseconds 
+        }); 
+ 
+        // Returns the box to its original state 
+        $("#resetBtn").click(function () { 
+            $("#box").animate({ 
+                left: "0px", 
+                opacity: 1, 
+                width: "100px", 
+                height: "100px" 
+            }, 500); 
+        }); 
+ 
+    }); 
+</script> 
+ 
+</body> 
+
+</html> 
+ 
