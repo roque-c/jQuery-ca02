@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Escape Room</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .hidden { display: none; }
+        .highlight { background-color: yellow; }
+        .box { width: 100px; height: 100px; background: steelblue; margin: 10px; }
+    </style>
+</head>
+<body>
+
+<h1 id="title">Website Hacked!</h1>
+
+<button id="fixBtn">Fix Title</button>
+
+<p class="secret hidden">The password is: jquery123</p>
+<button id="revealBtn">Reveal Secret</button>
+
+<ul id="tasks">
+    <li>Task 1</li>
+    <li>Task 2</li>
+    <li>Task 3</li>
+</ul>
+
+<input type="text" id="nameInput" placeholder="Type your name">
+<p id="greeting"></p>
+
+<div class="box"></div>
+<button id="animateBtn">Animate Box</button>
+
+<script src="script.js"></script>
+</body>
+</html>
