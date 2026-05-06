@@ -1,3 +1,5 @@
+import React from 'react'; 
+
 function Game() { 
   const [score, setScore] = React.useState(0); 
  
