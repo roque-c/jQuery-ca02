@@ -1,0 +1,77 @@
+CW 5 code
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CW5 – jQuery Setup & Selectors</title>
+
+  <!-- STEP 1: Paste the jQuery CDN script tag here -->
+  <!-- Use: https://code.jquery.com/jquery-3.7.1.min.js -->
+
+</head>
+<body>
+
+  <h1>Hello, World!</h1>
+  <p class="info">jQuery is a fast, small JavaScript library.</p>
+  <p id="note">This paragraph has an id of "note".</p>
+
+  <script>
+    $(document).ready(function () {
+
+      // STEP 2: Change the <h1> text to your name
+      $("___").text("___");
+
+      // STEP 3: Change the .info paragraph color to "steelblue"
+      $("___").css("color", "___");
+
+      // BONUS: Hide the #note paragraph using jQuery
+      // $("___").hide();
+
+    });
+  </script>
+
+</body>
+</html>
+
+
+CW6 starter code
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CW6 – jQuery Events & Effects</title>
+  <!-- jQuery CDN: paste the same script tag from CW5 -->
+</head>
+<body>
+
+  <p id="message">I can appear and disappear!</p>
+
+  <button id="btn-hide">Hide message</button>
+  <button id="btn-show">Show message</button>
+  <button id="btn-toggle">Toggle message</button>
+
+  <script>
+    $(document).ready(function () {
+
+      // STEP 2: Hide #message when btn-hide is clicked
+      $("#btn-hide").___(function () {
+        $("#message").___();
+      });
+
+      // STEP 3: Show #message when btn-show is clicked
+      $("#btn-show").___(function () {
+        $("#message").___();
+      });
+
+      // STEP 4: Toggle #message when btn-toggle is clicked
+      $("#btn-toggle").___(function () {
+        $("#message").___();
+      });
+
+    });
+  </script>
+
+</body>
+</html>
